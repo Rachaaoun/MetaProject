@@ -1,0 +1,42 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Seance{% endblock %}
+
+{% block body %}
+    <h1>Seance</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ seance.id }}</td>
+            </tr>
+            <tr>
+                <th>IdCoach</th>
+                <td>{{ seance.idCoach }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ seance.date }}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ seance.duree }}</td>
+            </tr>
+            <tr>
+                <th>NbrParticipants</th>
+                <td>{{ seance.nbrParticipants }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ seance.prix }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_seance_index') }}">back to list</a>
+
+    <a href="{{ path('app_seance_edit', {'id': seance.id}) }}">edit</a>
+
+    {{ include('seance/_delete_form.html.twig') }}
+{% endblock %}

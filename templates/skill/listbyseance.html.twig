@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Skill index{% endblock %}
+
+{% block body %}
+
+
+<div class="widget">
+						<span class="widgettitle">Skills <a href="">+ More</a></span>
+						<div class="sidebar-block">
+							 {% for skill in skills %}
+							<div class="forum decks">
+								<div class="s-ava">
+									<img src="../../../front/images/ava-1.png" alt="">
+								</div>
+								<div class="forum-text">
+									<a href="" title="New decks for November 2018. Knights" class="f-title">{{ skill.name }}</a>
+									<p>{{ skill.description }}</p>
+                                   
+								</div>
+								<div class="mana-block">
+									<span></span> {{ skill.diffculty }}
+								</div>
+							</div>
+                              {% else %}
+            <tr>
+                <td colspan="5">no skills found</td>
+            </tr>
+        {% endfor %}
+							
+							
+						</div><!-- sidebar-block -->
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block body %}
+    {{ form_start(form) }}
+
+    {{ form_row(form.q)}}
+<br>
+    {{ form_row(form.p) }}
+
+   
+    <button type="submit" class="btn btn-primary w=100">Chercher </button>
+
+    {{ form_end(form) }}
+
+{% endblock %}
